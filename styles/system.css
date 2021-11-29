@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;900&family=Roboto:wght@400;700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: #12161a;
   font-family: 'Roboto', sans-serif;
@@ -13,22 +18,53 @@ h5,
 h6 {
   color: #12161a;
   font-family: 'Roboto Slab', serif;
-  margin: 0.5em auto 1em auto;
+  margin: 0.6em auto;
 }
 
+a {
+  color: #0ff;
+}
 
 /* HEADER */
 header {
-  background-color: #12161A;
+  background-color: aquamarine;
+  padding: 16px;
 }
-h1 {
-  color: #EBF0F5;
+
+/* NAV */
+nav {
+  background-color: brown;
+  padding: 8px 16px;
 }
 
 /* MAIN */
-.post-item {
-  border: 1px solid #12161A;
-  border-radius: 3px;
-  padding: 16px;
-  margin: 8px auto;
+main {
+  background-color: burlywood;
+  padding: 8px 16px;
+}
+.card {
+  border: 1px solid #000;
+  margin-bottom: 16px;
+}
+.card-category {
+  font-size: 0.8em;
+}
+.card-date {
+  font-size: 0.8em;
+  text-align: right;
+}
+.card-title {
+  text-align: left;
+}
+.card-body {
+  margin-bottom: 16px;
+}
+.card-link {
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  background-color: coral;
+  padding: 8px;
 }

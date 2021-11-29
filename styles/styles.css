@@ -1,2 +1,6 @@
 @import url('system.css');
 @import url('grid.css');
+
+.blurry {
+  filter: blur(1px);
+}
