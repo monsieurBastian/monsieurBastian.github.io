@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: 300px 600px 50px; */
+  grid-template-areas: 
+  "hd hd hd hd"
+  "main main main main"
+  "ft ft ft ft";
+}
+
+header {
+  grid-area:hd;
+  padding: 16px;
+}
+footer {
+  background-color: coral;
+  grid-area:ft;
+}
+
+.content{
+  align-items: center;
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  grid-area:main;
+  padding: 16px;
+}
