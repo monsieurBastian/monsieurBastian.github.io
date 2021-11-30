@@ -46,7 +46,8 @@ main {
     "title title"
     "body body"
     "link link";
-  padding: 24px;
+  margin: 0.5em;
+  padding: 1.5em 1em;
 }
 .card-category {
   grid-area: cat;
@@ -69,13 +70,20 @@ main {
     flex-flow: row wrap;
   }
   .card {
-    flex: 1 0 45%;
+    flex: 1 0 40%;
   }
 }
 
 @media (min-width: 62em) { /* destop */
   .card {
-    flex: 1 0 20%;
+    flex: 1 0 30%;
+    margin: 1em;
+  }
+}
+@media (min-width: 81em) { /* large destop */
+  .card {
+    flex: 1 0 22%;
+    margin: 1em;
   }
 }
 
