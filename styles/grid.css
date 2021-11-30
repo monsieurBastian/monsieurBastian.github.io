@@ -32,25 +32,32 @@ nav ul li {
 /* MAIN */
 main {
   grid-area: main;
+  padding: 0.5em;
+}
+main > h2 {
+  text-align: center;
 }
 .container {
   display: flex;
   flex-direction: column;
-  margin: 8px auto;
+  margin: auto;
 }
 .card {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30px 1fr 2fr 40px;
   grid-template-areas:
-    "cat date"
+    "date cat"
     "title title"
     "body body"
     "link link";
+  justify-items: start;
   margin: 0.5em;
   padding: 1.5em 1em;
 }
 .card-category {
   grid-area: cat;
+  justify-self: end;
 }
 .card-date {
   grid-area: date;
@@ -63,6 +70,7 @@ main {
 }
 .card-link {
   grid-area: link;
+  align-self: end;
 }
 
 @media (min-width: 43em) { /* tablet */
@@ -70,19 +78,19 @@ main {
     flex-flow: row wrap;
   }
   .card {
-    flex: 1 0 40%;
+    flex: 40%;
   }
 }
 
 @media (min-width: 62em) { /* destop */
   .card {
-    flex: 1 0 30%;
+    flex: 30%;
     margin: 1em;
   }
 }
 @media (min-width: 81em) { /* large destop */
   .card {
-    flex: 1 0 22%;
+    flex: 22%;
     margin: 1em;
   }
 }

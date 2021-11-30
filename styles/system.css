@@ -22,14 +22,18 @@ h6 {
 }
 
 a {
-  color: #0ff;
+  color: hsl(210, 82%, 28%);
+  font-weight: bold;
+}
+a:hover {
+  color: hsl(210, 82%, 38%);
 }
 
 /* HEADER */
 header {
   background-color: hsl(210, 18%, 9%);
   color: #fff;
-  padding: 16px;
+  padding: 1em;
 }
 header h1 {
   color: #fff;
@@ -51,30 +55,30 @@ header h1 {
 nav {
   background-color: hsl(210, 18%, 21%);
   color: #fff;
-  padding: 8px 16px;
+  padding: 0.5em 1em;
 }
 
 /* MAIN */
 main {
-  background-color: burlywood;
-  padding: 8px 16px;
+  padding: 0.5em 1em;
 }
 .card {
   border: 1px solid #000;
-  margin-bottom: 16px;
+  border-radius: 0.25em;
+  margin-bottom: 1em;
 }
 .card-category {
   font-size: 0.8em;
+  text-transform: uppercase;
 }
 .card-date {
   font-size: 0.8em;
-  text-align: right;
 }
 .card-title {
   text-align: left;
 }
 .card-body {
-  margin-bottom: 16px;
+  margin-bottom: 1em;
 }
 .card-link {
   text-decoration: none;
@@ -82,6 +86,9 @@ main {
 
 /* FOOTER */
 footer {
-  background-color: coral;
-  padding: 8px;
+  background-color: #35414D;
+  color: white;
+  font-size: 0.8em;
+  padding: 0.5em;
+  text-align: center;
 }
