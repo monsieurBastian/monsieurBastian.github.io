@@ -16,7 +16,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #12161a;
+  color: hsl(210, 18%, 9%);
   font-family: 'Roboto Slab', serif;
   margin: 0.6em auto;
 }
@@ -27,13 +27,30 @@ a {
 
 /* HEADER */
 header {
-  background-color: aquamarine;
+  background-color: hsl(210, 18%, 9%);
+  color: #fff;
   padding: 16px;
+}
+header h1 {
+  color: #fff;
+}
+
+@media (min-width: 43em) { /* tablet */
+  header h1 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 62em) { /* destop */
+  header h1 {
+    font-size: 3.75rem;
+  }
 }
 
 /* NAV */
 nav {
-  background-color: brown;
+  background-color: hsl(210, 18%, 21%);
+  color: #fff;
   padding: 8px 16px;
 }
 

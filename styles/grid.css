@@ -1,4 +1,4 @@
-.body {
+body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
@@ -62,6 +62,21 @@ main {
 }
 .card-link {
   grid-area: link;
+}
+
+@media (min-width: 43em) { /* tablet */
+  .container {
+    flex-flow: row wrap;
+  }
+  .card {
+    flex: 1 0 45%;
+  }
+}
+
+@media (min-width: 62em) { /* destop */
+  .card {
+    flex: 1 0 20%;
+  }
 }
 
 /* FOOTER */
