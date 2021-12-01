@@ -1,101 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  width: 100%;
+}
+
+.container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
-  grid-template-areas:
+  grid-template-areas: 
     "hd"
     "nav"
     "main"
     "ft";
-  margin: 0;
-  width: 100%;
 }
+.container > * {
+  padding: 1em;
+}
+
 
 /* HEADER */
 header {
+  align-self: stretch;
   grid-area: hd;
 }
 
-/* NAVIGATION */
+
+/* NAV */
 nav {
+  align-self: stretch;
   grid-area: nav;
 }
 nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 nav ul li {
   display: inline;
+  margin-right: 2em;
 }
+
 
 /* MAIN */
 main {
+  align-self: start;
   grid-area: main;
-  padding: 0.5em;
 }
 main > h2 {
   text-align: center;
 }
-.container {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
+
+.blog-cards {
+  display: grid;
+  gap: 1em 1em; /* row-gap column-gap */
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
 }
 .card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 30px 1fr 2fr 40px;
-  grid-template-areas:
-    "date cat"
-    "title title"
-    "body body"
-    "link link";
-  justify-items: start;
-  margin: 0.5em;
-  padding: 1.5em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 1em;
+  padding: 1em 2em;
 }
-.card-category {
-  grid-area: cat;
-  justify-self: end;
-}
-.card-date {
-  grid-area: date;
-}
-.card-title {
-  grid-area: title;
-}
-.card-body {
-  grid-area: body;
-}
-.card-link {
-  grid-area: link;
-  align-self: end;
+.card > *:last-child {
+  margin-top: auto;
 }
 
+
+/* FOOTER */
+footer {
+  align-self: stretch;
+  grid-area: ft;
+}
+
+
+
+/* QUERIES */
 @media (min-width: 43em) { /* tablet */
-  .container {
-    flex-flow: row wrap;
-  }
-  .card {
-    flex: 40%;
+  .blog-cards {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (min-width: 62em) { /* destop */
-  .card {
-    flex: 30%;
-    margin: 1em;
-  }
-}
-@media (min-width: 81em) { /* large destop */
-  .card {
-    flex: 22%;
-    margin: 1em;
+  .blog-cards {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-/* FOOTER */
-footer {
-  grid-area:ft;
+@media (min-width: 81em) { /* large destop */
+  .blog-cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
