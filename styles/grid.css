@@ -31,13 +31,12 @@ header {
 
 /* NAV */
 nav {
-  align-self: stretch;
   grid-area: nav;
 }
 nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
 }
 nav ul li {
   display: inline;
@@ -71,30 +70,39 @@ main > h2 {
   margin-top: auto;
 }
 
-
 /* FOOTER */
 footer {
-  align-self: stretch;
   grid-area: ft;
+  text-align: center;
 }
 
 
 
 /* QUERIES */
-@media (min-width: 43em) { /* tablet */
+
+@media (min-width: 481px) { /* tablets */
   .blog-cards {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (min-width: 62em) { /* destop */
+@media (min-width: 769px) { /* laptop */
   .blog-cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@media (min-width: 81em) { /* large destop */
+@media (min-width: 1025px) { /* desktop */ 
   .blog-cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+@media (min-width: 1201px) { /* large screen */
+  .blog-cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+
+

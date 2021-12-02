@@ -1,7 +1,2 @@
 @import url('system.css');
 @import url('grid.css');
-
-/* HELPERS */
-.blurry {
-  filter: blur(1px);
-}

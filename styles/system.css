@@ -17,31 +17,33 @@ h5,
 h6 {
   color: hsl(210, 18%, 9%);
   font-family: 'Roboto Slab', serif;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
 }
 h1 {
   font-size: 42px;
-  line-height: 44px;
   font-weight: 900;
+  line-height: 44px;
 }
 h2 {
   font-size: 28px;
-  line-height: 32px;
   font-weight: 400;
+  line-height: 32px;
 }
 h3 {
   font-size: 26px;
-  line-height: 32px;
   font-weight: 900;
+  line-height: 32px;
 }
 h4 {
   font-size: 20px;
-  line-height: 24px;
   font-weight: 400;
+  line-height: 24px;
 }
 h5 {
   font-size: 20px;
-  line-height: 24px;
   font-weight: 200;
+  line-height: 24px;
 }
 h6 {
   font-size: 18px;
@@ -63,6 +65,20 @@ a:hover {
   color: hsl(210, 82%, 38%);
 }
 
+ul {
+  list-style-position: inside;
+}
+
+p {
+  margin-bottom: 1em;
+}
+.lead {
+  color: hsl(210, 18%, 29%);
+  font-style: italic;
+  margin-top: 2em;
+}
+
+
 .container > * {
   padding: 1em;
 }
@@ -81,8 +97,8 @@ header h1 {
 
 /* NAV */
 nav {
-  background-color: hsl(210, 18%, 21%);
-  color: #fff;
+  background-color: hsl(210, 18%, 81%);
+  color: hsl(210, 18%, 21%);
 }
 nav ul li {
   display: inline;
@@ -110,4 +126,10 @@ footer {
   background-color: hsl(210, 18%, 21%);
   color: #fff;
   font-size: 0.8em;
+}
+
+
+/* HELPERS */
+.blurry {
+  filter: blur(1px);
 }
