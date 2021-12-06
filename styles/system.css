@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@100;400;900&display=swap');
 
+
+* {
+  margin: 0;
+  padding: 0;
+}
 html {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 1.5rem;
 }
 body {
-  color: #12161a;
+  background-color: hsl(210, 18%, 11%);
+  color: #fff;
   font-family: 'Lora', serif;
+  width: 100%;
 }
-
 h1,
 h2,
 h3,
@@ -18,8 +24,8 @@ h6 {
   color: hsl(210, 18%, 9%);
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  margin-top: 0.5em;
-  margin-bottom: 0.25em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 h1 {
   font-size: 3.375rem;
@@ -46,85 +52,102 @@ h6 {
   line-height: 1.375rem;
   text-transform: uppercase;
 }
-
 caption {
   font-size: 0.875rem;
   line-height: 1.125rem;
 }
-
 a {
-  color: hsl(210, 82%, 28%);
-  font-weight: bold;
+  color: hsl(16, 100%, 50%);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 a:hover {
-  color: hsl(210, 82%, 38%);
+  color: hsl(16, 100%, 40%);
 }
-
 ul {
   list-style-position: inside;
 }
-
-p {
-  margin-bottom: 1em;
+p + p {
+  margin-top: 1em;
 }
-.lead {
-  color: hsl(210, 18%, 29%);
-  font-style: italic;
-  margin-top: 2em;
+.category {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+.text-lead {
+  font-size: 1.25rem;
+}
+.text-small {
+  font-size: 0.875rem;
 }
 
 
-.container > * {
-  padding: 1em;
+/* NAV */
+nav {
+  color: hsl(210, 18%, 11%);
+}
+nav ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+.hamburger {
+  background-color: hsl(16, 100%, 50%);
+  color: #fff;
+}
+.hamburger a {
+  color: #fff;
 }
 
 
 /* HEADER */
 header {
   background-color: hsl(210, 18%, 11%);
-  padding: 1.5em;
+  margin: 1rem;
 }
 header h1 {
   color: #fff;
-  text-align: center;
-}
-
-
-/* NAV */
-nav {
-  background-color: hsl(210, 18%, 81%);
-  color: hsl(210, 18%, 21%);
-}
-nav ul li {
-  display: inline;
-  margin-right: 2em;
 }
 
 
 /* MAIN */
 main {
-  background-color: #f6f6f6;
+  padding: 1rem;
 }
-main > h2 {
-  text-align: center;
-}
-
 .card {
-  background-color: #fff;
-  border: 1px solid #f0f0f0;
+  background-color: hsl(210, 100%, 97%);
   border-radius: 6px;
+}
+.card:hover {
+  background-color: #fff;
 }
 
 
 /* FOOTER */
 footer {
-  background-color: hsl(210, 18%, 21%);
   color: #fff;
-  font-size: 0.8em;
+  font-family: 'Roboto', sans-serif;
 }
 
 
 /* HELPERS */
 .blurry {
   filter: blur(1px);
+}
+
+
+/* QUERIES */
+@media (min-width: 688px) { /* tablets */
+  main {
+    padding: 2rem;
+  }
+  h1 {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) { /* laptop */
+  html {
+    font-size: 16px;
+  }
 }

@@ -5,17 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Bake a cake</title>
-  <link rel="stylesheet" href="styles/blog-posts.css">
+  <title>In pursuit of a blurry Dream</title>
+  <link rel="stylesheet" href="styles/blog-post.css">
 </head>
 
 <body>
   <div class="container">
-    <header>
-      <h1>In pursuit of a <span class="blurry">blurry</span> dream</h1>
-    </header>
 
     <nav>
+      <div class="hamburger"><a href="index.html">&#9776;</a></div>
       <ul>
         <li><a href="index.html">Blog</li>
         <li><a href="#">About</a></li>
@@ -23,34 +21,41 @@
       </ul>
     </nav>
 
+    <header>
+      <h1>In pursuit of a <span class="blurry">blurry</span> dream</h1>
+    </header>
+
     <main>
       <div class="content">
         <article>
           <h2>It is not what you expected</h2>
-          <p class="lead">And I know. But let me tell you why!</p>
-          <p>That project is to create an index page with a list of posts and a page with a post detail.</p>
+          <p class="text-lead">And I know. But let me tell you why! Because there is a clear reason why.</p>
+          <p>That project is about to create an index page with a list of posts and a page with a post detail.</p>
           <p>I had several ideas for creating a list of posts but as there is only one post detail, I decided to link all post cards to that single post detail.</p>
           <p>Therefore I had to come up with an explanation why the destination title doesn't match the title of the card you clicked ;)</p>
+          <p>And please apologize if my english is not perfect. I am a native french speaker.</p>
         </article>
         
         <div class="posts-navigation">
           <a href="#previous">Previous post</a>
-          <a href="#next">Next post</a>
+          <a href="#next" class="inactive-post-link">Next post</a>
         </div>
 
         <div class="author">
-          <h3>Bastian</h3>
-          <h4>Future Frontend developer</h4>
+          <img src="images/basti.jpg" class="author-avatar" alt="Basti wearing over-the-ear steelseries headphones">
+          <h6 class="author-name">Bastian G.</h6>
+          <p class="author-country">Fribourg, Switzerland</p>
         </div>
       </div>
+
       <div class="sidebar">
-        <h3>Latest articles</h3>
+        <h5>Latest articles</h5>
         <ul>
           <li>Never give up</li>
           <li>Bake a cake</li>
           <li>Run for fun</li>
         </ul>
-        <h3>Categories</h3>
+        <h5>Categories</h5>
         <ul>
           <li>Food</li>
           <li>Sport</li>
