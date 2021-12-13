@@ -1,0 +1,47 @@
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.logo {
+  border: 0;
+  width: 120px;
+}
+nav {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+nav ul {
+  display: none;
+}
+nav ul li {
+  display: inline;
+  margin: auto;
+  padding: 1rem;
+}
+.hamburger {
+  align-items: center;
+  display: flex;
+  font-size: 1.5em;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+
+/* QUERIES */
+@media (min-width: 688px) { /* tablets */
+
+}
+@media (min-width: 992px) { /* laptop */
+  nav ul {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
+}
+@media (min-width: 1201px) { /* desktop */ 
+
+}
