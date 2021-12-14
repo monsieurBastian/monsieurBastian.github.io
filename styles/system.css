@@ -82,6 +82,12 @@ a:hover {
 .read-more {
   margin-bottom: 1rem;
 }
+header a {
+  color: hsl(16, 100%, 55%);
+}
+header a:hover {
+  color: hsl(16, 100%, 65%);
+}
 ul {
   list-style-position: inside;
 }
