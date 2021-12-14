@@ -70,14 +70,14 @@ figcaption {
   width: 100%;
 }
 a {
-  color: hsl(16, 100%, 50%);
+  color: hsl(16, 100%, 41%);
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
   text-decoration: none;
   text-transform: uppercase;
 }
 a:hover {
-  color: hsl(16, 100%, 40%);
+  color: hsl(16, 100%, 43%);
 }
 .read-more {
   margin-bottom: 1rem;
@@ -116,7 +116,7 @@ nav ul li {
   margin: 0 1rem;
 }
 .hamburger {
-  background-color: hsl(16, 100%, 50%);
+  background-color: hsl(16, 100%, 41%);
   color: #fff;
 }
 .hamburger a {
