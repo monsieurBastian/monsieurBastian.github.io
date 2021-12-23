@@ -16,6 +16,6 @@ This is the list of projects I am working on during the Front End Nanodegree. Th
 
 ## About
 
-Hi, I'm @monsieurBastian. I am currently working as a Frontend and Multimedia Team Lead at [SCOTT Sports](https://www.scott-sports.com) in Givisiez, Switzerland. 
+Father of 3 who likes Sport (swimming, bike, running), cooking and photography. And video games too ;) 
 
-When I am not working, I am doing Sports (Swim, Bike, Run), cooking and taking pictures. I also spend time with my wife and my 3 kids.
+I live in Switzerland (not Sweden!) and work as a Frontend and Multimedia Team Lead at [SCOTT Sports](https://www.scott-sports.com). 
