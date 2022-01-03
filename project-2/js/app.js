@@ -167,17 +167,6 @@ function showBackToTop() {
   }
 }
 
-
-/**
-* @description Scroll to top
-*/
-/* function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-} */
-
 /* End Functions */
 
 
