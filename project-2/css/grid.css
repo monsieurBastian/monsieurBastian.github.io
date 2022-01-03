@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: grid;
+  grid:   
+    "head" auto
+    "main" 1fr
+    "side"
+    "foot" auto
+    / 1fr;
+}
+header {
+  grid-area: head;
+}
+main {
+  grid-area: main;
+}
+.sidebar {
+  grid-area: side;
+}
+footer {
+  grid-area: foot;
+}
+
+/* QUERIES */
+@media (min-width: 688px) { /* tablets */
+  .container {
+    display: grid;
+    grid:   
+      "head head" auto
+      "main side" 1fr
+      "foot foot" auto
+      / 2fr 1fr;
+  }
+}
+@media (min-width: 992px) { /* laptop */
+  .container {
+    display: grid;
+    grid:   
+      "head head" auto
+      "main side" 1fr
+      "foot foot" auto
+      / 3fr 1fr;
+  }
+}
+@media (min-width: 1201px) { /* desktop */ 
+
+}

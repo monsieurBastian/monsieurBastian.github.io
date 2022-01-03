@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<path fill="#fff" d="M504,251C504,114,393,3,256,3S8,114,8,251c0,123.8,90.7,226.4,209.2,245V322.7h-63V251h63v-54.6c0-62.2,37-96.5,93.7-96.5
+	c27.1,0,55.5,4.8,55.5,4.8v61h-31.3c-30.8,0-40.4,19.1-40.4,38.7V251h68.8l-11,71.7h-57.8V496C413.3,477.4,504,374.8,504,251z"/>
+</svg>
