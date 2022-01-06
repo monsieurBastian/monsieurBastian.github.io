@@ -118,7 +118,7 @@ function navActiveInViewport() {
     // the section is active in the viewport when
     // almost at the top (< 100px), as long as the bottom
     // is not almost at the top (< 100px)
-    if (sectionPosition['top'] <= 150 && sectionPosition['bottom'] >= 150) {
+    if (sectionPosition['top'] <= 120 && sectionPosition['bottom'] >= 120) {
       navLink.classList.add('nav-active');
     } else {
       navLink.classList.remove('nav-active');

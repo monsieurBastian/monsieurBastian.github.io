@@ -1,5 +1,5 @@
 header {
-  height: 180px;
+  height: 127;
   width: 100%;
 }
 .navigation {
@@ -12,12 +12,12 @@ header {
 }
 .logo {
   border: 0;
-  padding: 1rem;
-  width: 120px;
+  padding: 1rem 1rem 0 1rem;
+  width: 90px;
 }
 nav {
   margin-right: 0;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 nav ul {
   align-items: flex-start;
@@ -29,11 +29,10 @@ nav ul li {
   flex-basis: 50%;
   margin: 0;
   padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
 }
 .navigation-sticky {
   animation-name: appear;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   position: fixed;
 }
 @keyframes appear {
@@ -46,14 +45,26 @@ nav ul li {
   header {
     height: 70px;
   }
+  .logo {
+    border: 0;
+    padding: 1rem;
+    width: 120px;
+  }
   .navigation {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
   }
+  nav {
+    margin-right: 0;
+    padding: 1rem;
+  }
   nav ul {
     flex-wrap: nowrap;
     gap: 2rem;
+  }
+  nav ul li {
+    padding-top: 0.5rem;
   }
 }
 @media (min-width: 992px) { /* laptop */
