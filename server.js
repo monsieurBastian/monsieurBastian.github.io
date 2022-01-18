@@ -8,7 +8,7 @@
 */
 
 
-
+// Endpoint for all routes
 projectData = {};
 
 
@@ -46,9 +46,10 @@ app.use(express.static('website'));
  * 
  */
 
-// run the server
+// Run the server
 const port = 8000;
 const server = app.listen(port, () => {
+  // Callback to debug
   console.log(`Running on localhost: ${port}`);
 });
 
@@ -62,13 +63,13 @@ const server = app.listen(port, () => {
  */
 
 // GET route to return the project data
-app.get("/", function(req, res) {
+app.get("/all", function(req, res) {
   res.send(projectData);
   console.log('the GET route');
 });
 
 // POST route
-app.post("/add", function(req, res) {
+app.post("/all", function(req, res) {
   res.send('POST received');
   console.log('the POST route');
 });
