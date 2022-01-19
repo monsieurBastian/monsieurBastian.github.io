@@ -63,13 +63,13 @@ const server = app.listen(port, () => {
  */
 
 // GET route to return the project data
-app.get("/all", function(req, res) {
+app.get("/", function(req, res) {
   res.send(projectData);
   console.log('the GET route');
 });
 
 // POST route
-app.post("/all", function(req, res) {
+app.post("/", function(req, res) {
   res.send('POST received');
   console.log('the POST route');
 });
