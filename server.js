@@ -1,5 +1,5 @@
 // Endpoint for all routes
-projectData = {};
+projectData = [];
 
 
 
@@ -53,15 +53,29 @@ const server = app.listen(port, () => {
  */
 
 // Init all routes with callback function
-
-// GET route to return the project data
+// GET route
 app.get("/", function(req, res) {
   res.send(projectData);
   console.log('the GET route');
 });
-
 // POST route
 app.post("/", function(req, res) {
   res.send('POST received');
   console.log('the POST route');
+});
+
+
+// GET weather data
+
+// POST weather data
+app.post('/addweather', function(req, res) {
+  newEntry = {
+    date: req.body.date,
+    temperature: req.body.temperature,
+    content: req.body.content,
+  }
+  projectData.push(newEntry);
+  res.send(projectData);
+
+  console.log("POST route push data", projectData);
 });
