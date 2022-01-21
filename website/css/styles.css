@@ -48,6 +48,7 @@ label {
 }
 
 input,
+select,
 textarea {
   min-width: 50vw;
 }

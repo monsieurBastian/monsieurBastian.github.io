@@ -207,7 +207,8 @@ footer {
 
 /* FORMS */
 
-input, 
+input,
+select,
 textarea {
   background-color: hsl(210, 18%, 15%);
   border: hsl(210, 18%, 45%) 1px solid;

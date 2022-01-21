@@ -1,13 +1,3 @@
-/* INSTALL PACKAGES ON THE MACHINE */
-/*
-1. install the necessary packages in terminal
-    - node > node -v > v17.3.0
-    - express > npm list express > express@4.17.2
-    - body parser > npm list body-parser > body-parser@1.19.1
-    - cors > npm list cors > cors@2.8.5
-*/
-
-
 // Endpoint for all routes
 projectData = {};
 
@@ -31,11 +21,11 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Allow cross origin with Cors
+// Cors for cross origin allowance
 const cors = require('cors');
 app.use(cors());
 
-// Init project folder
+// Init main project folder
 app.use(express.static('website'));
 
 
@@ -61,6 +51,8 @@ const server = app.listen(port, () => {
  * Routes
  * 
  */
+
+// Init all routes with callback function
 
 // GET route to return the project data
 app.get("/", function(req, res) {
