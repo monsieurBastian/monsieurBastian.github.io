@@ -35,7 +35,8 @@ section {
 }
 #temperature {
   font-size: 3rem;
-  padding: 1rem auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 label {
