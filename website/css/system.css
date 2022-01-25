@@ -55,6 +55,13 @@ h6 {
   line-height: 1.375rem;
   text-transform: uppercase;
 }
+.light {
+  color: hsl(210, 18%, 65%);
+}
+.space-before {
+  padding-top: 2rem;
+}
+
 figure {
   margin-bottom: 2em;
   margin-top: 2em;

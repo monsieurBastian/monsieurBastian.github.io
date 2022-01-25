@@ -30,16 +30,12 @@ section {
   padding-bottom: 1rem;
 }
 
-/*
-.zip {}
-
-.feelings {}
-
-.button {}
-*/
-
 .entry {
   display: none;
+}
+#temperature {
+  font-size: 3rem;
+  padding: 1rem auto;
 }
 
 label {

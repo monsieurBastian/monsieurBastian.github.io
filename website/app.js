@@ -15,7 +15,9 @@ function performAction(e) {
   const country = document.getElementById('country').value;
   const feelings = document.getElementById('feelings').value;
 
+  // get weather data
   getWeather(apiURL, zip, country, apiKey)
+  // post data to the app
   .then(function(data) {
     // format the time of data calculation (dt) into a nice date 
     // https://coderrocketfuel.com/article/convert-a-unix-timestamp-to-a-date-in-vanilla-javascript
@@ -29,8 +31,8 @@ function performAction(e) {
       content: feelings
     });
 
-    //console.log("post data", data);
-    //console.log("date", formattedDate);
+    //update ui
+    updateUI()
   });
 }
 
@@ -42,8 +44,8 @@ const getWeather = async (apiURL, zip, country, apiKey) => {
 
   try {
     const data = await res.json();
-    //console.log("get data", data);
     return data;
+
   } catch(error) {
     console.log("error!", error);
   }
@@ -53,9 +55,6 @@ const getWeather = async (apiURL, zip, country, apiKey) => {
 
 /* Function to POST data */
 const postWeather = async (url, data) => {
-  console.log("url in postWeather", url);
-  console.log("data in postWeather", data);
-
   const res = await fetch(url, {
     method: 'POST',
     credentials: 'same-origin',
@@ -68,6 +67,7 @@ const postWeather = async (url, data) => {
   try {
     const newData = await res.json();
     return newData;
+
   } catch(error) {
     console.log("error!", error);
   }
@@ -75,5 +75,28 @@ const postWeather = async (url, data) => {
 
 
 
-/* Function to GET Project Data */
+/* Update UI */
+const updateUI = async () => {
+  const req = await fetch("/all");
 
+  try {
+    const allData = await req.json();
+    const last = allData.length - 1;
+    
+    // make the part visible
+    const entry = document.getElementById('entry');
+    entry.style.display = 'block';
+
+    // populate the divs
+    document.getElementById('date').innerHTML = allData[last].date;
+    document.getElementById('temperature').innerHTML = Math.round(allData[last].temperature) + ' °C';
+    document.getElementById('content').innerHTML = 'I am feeling ' + allData[last].content;
+
+    /* 
+    // display previous entries
+    const previous = document.getElementById('previousEntries');
+     */
+  } catch(error) {
+    console.log("error", error);
+  }
+}

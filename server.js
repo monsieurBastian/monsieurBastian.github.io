@@ -53,19 +53,26 @@ const server = app.listen(port, () => {
  */
 
 // Init all routes with callback function
+
 // GET route
 app.get("/", function(req, res) {
   res.send(projectData);
-  console.log('the GET route');
 });
+
 // POST route
 app.post("/", function(req, res) {
   res.send('POST received');
-  console.log('the POST route');
 });
 
 
-// GET weather data
+
+// GET all data
+app.get('/all', function(req, res) {
+  console.log("GET /all ", projectData);
+  res.send(projectData);
+});
+
+
 
 // POST weather data
 app.post('/addweather', function(req, res) {
