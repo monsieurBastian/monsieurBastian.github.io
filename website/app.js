@@ -1,6 +1,6 @@
 // Personal API Key for OpenWeatherMap API
 const apiKey = '00289487ec42986f287e92fe3169b5c2&units=metric';
-const apiURL = 'https://api.openweathermap.org/data/2.5/weather';
+const apiURL = 'http://api.openweathermap.org/data/2.5/weather';
 
 
 
@@ -14,9 +14,10 @@ function performAction(e) {
   const zip = document.getElementById('zip').value;
   const country = document.getElementById('country').value;
   const feelings = document.getElementById('feelings').value;
+  const weatherURL = apiURL + '?zip=' + zip + ',' + country + '&appid=' + apiKey;
 
   // get weather data
-  getWeather(apiURL, zip, country, apiKey)
+  getWeather(weatherURL)
   // post data to the app
   .then(function(data) {
     // format the time of data calculation (dt) into a nice date 
@@ -39,8 +40,8 @@ function performAction(e) {
 
 
 /* Function to GET Web API Data*/
-const getWeather = async (apiURL, zip, country, apiKey) => {
-  const res = await fetch(apiURL + '?zip=' + zip + ',' + country + '&appid=' + apiKey);
+const getWeather = async (url) => {
+  const res = await fetch(url);
 
   try {
     const data = await res.json();
@@ -81,16 +82,14 @@ const updateUI = async () => {
 
   try {
     const allData = await req.json();
-    const last = allData.length - 1;
-    
     // make the part visible
     const entry = document.getElementById('entry');
     entry.style.display = 'block';
 
     // populate the divs
-    document.getElementById('date').innerHTML = allData[last].date;
-    document.getElementById('temperature').innerHTML = Math.round(allData[last].temperature) + ' °C';
-    document.getElementById('content').innerHTML = 'I am feeling ' + allData[last].content;
+    document.getElementById('date').innerHTML = allData.date;
+    document.getElementById('temperature').innerHTML = Math.round(allData.temperature) + ' °C';
+    document.getElementById('content').innerHTML = 'I am feeling ' + allData.content;
 
     /* 
     // display previous entries

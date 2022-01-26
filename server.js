@@ -1,5 +1,5 @@
 // Endpoint for all routes
-projectData = [];
+projectData = {};
 
 
 
@@ -68,7 +68,6 @@ app.post("/", function(req, res) {
 
 // GET all data
 app.get('/all', function(req, res) {
-  console.log("GET /all ", projectData);
   res.send(projectData);
 });
 
@@ -81,7 +80,7 @@ app.post('/addweather', function(req, res) {
     temperature: req.body.temperature,
     content: req.body.content,
   }
-  projectData.push(newEntry);
+  projectData = newEntry;
   res.send(projectData);
 
   console.log("POST route push data", projectData);
