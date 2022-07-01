@@ -1,0 +1,10 @@
+label {
+  display: block;
+  margin-bottom: 1em;
+}
+
+input,
+select,
+textarea {
+  min-width: 50vw;
+}
