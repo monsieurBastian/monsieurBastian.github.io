@@ -102,15 +102,13 @@ p + p {
 /*--- HEADER ---*/
 header {
   background: #fff;
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 32px rgba(102, 102, 102, 0.1);
   height: 80px;
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
 }
 .header__wrapper {
-  border: 1px solid blue;
   align-items: center;
   display: flex;
   height: 100%;
@@ -154,21 +152,22 @@ nav {
 
 /*--- MAIN ---*/
 /* check SMACSS architecture. To learn more, visit: http://smacss.com/ */
-.container {
+.main__wrapper {
   margin: 0 auto;
   max-width: 800px;
-  padding: 0 24px;
-  width: 100%;
 }
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 90vh;
-  padding-bottom: 3rem;
+.main__content {
+  padding: 24px;
 }
-.mod-hero h2 {
-  font-size: 4rem;
+.mod-hero {
+  padding-bottom: 3em;
+  padding-top: 3em;
+}
+.hero__content {
+  padding: 24px;
+} 
+.hero__content h2 {
+  font-size: 2em;
   line-height: 110%;
   color: #00e599;
   background-image: linear-gradient(45deg,#0bb27a,#00e599);
@@ -176,11 +175,12 @@ section {
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
+  padding-top: 0.5em;
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
-.mod-hero h2::selection {
+.hero__content h2::selection {
   color: #fff;
   background-image: none;
   background-clip: unset;
@@ -188,11 +188,27 @@ section {
   -moz-background-clip: unset;
   text-fill-color: white;
   -webkit-text-fill-color: white;
-  -moz-text-fill-color: white;
+  -moz-text-fill-color: white;display: block;
 }
+.hero__social-icons {
+  font-size: 1.5em;
+  padding-top: 1em;
+}
+.hero__social-icons a {
+  margin-right: 18px;
+}
+
 
 
 /*--- FOOTER ---*/
 footer {
-  padding: 1rem;
+  bottom: 0;
+}
+.footer__wrapper {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 8px 24px;
+}
+.text-small {
+  font-size: 12px;
 }
